@@ -1,0 +1,615 @@
+/*Navbar*/
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+ body{
+	width: 100%;
+	height: 100vh;
+	background-image: url(../Images/lum.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+	background-attachment: fixed;
+}
+nav{
+	width: 100%;
+	height: 60px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	font-size: 15px;
+}
+.logo{
+	font-family:"Palatino Linotype",serif;
+	font-weight: bolder;
+	text-transform: uppercase;
+	text-decoration: none;
+	color:#E56A00E9;
+	font-size: 25px;
+	margin-left: 20px;
+}
+nav ul{
+	background-color: #E56A00E9;
+}
+
+nav ul li{
+	font-family:" Palatino Linotype",serif;
+	display: inline-block;
+	font-weight: bolder;
+	text-transform: uppercase;
+	padding: 20px;
+	position: relative;
+
+}
+nav ul li a{
+	text-decoration: none;
+	color: white;
+}
+nav ul li ul{
+	position: absolute;
+	visibility: hidden;
+	opacity: 0;
+	text-align: center;
+	width: 100%;
+	transition: 0.4s linear;
+}
+
+nav >ul >li>ul{
+	top: 100%;
+	left: 0;
+	border-top: 3px solid white;
+
+}
+nav > ul > li > ul >li ul{
+	left: 100%;
+	top:30%;
+	border-top: 3px solid white;
+	border-left: 3px solid white;
+
+}
+
+nav ul li:hover >ul{
+	visibility:visible;
+	opacity: 1;
+}
+
+
+label{
+	width: 150px;
+	height: 45px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border: 1px solid #E56A00E9;
+	font-weight: bolder;
+	font-size: 30px;
+	color:white;
+	margin-right: 20px;
+	display: none;
+
+}
+.index label span{
+	font-family: " Palatino Linotype",serif;
+	color:white;
+}
+label span{
+	font-family: " Palatino Linotype",serif;
+	color:#E56A00E9;
+}
+   #box{
+	display: none;
+
+}
+
+@media (max-width: 768px) {
+
+	.menu {
+		position: absolute;
+		top: 70px;
+		left: -100%;
+		transition: 0.4s linear;
+		width: 100%;
+	}
+	nav ul li{
+		display: block;
+	}
+	label{
+		display: flex;
+	}
+	nav ul li ul{
+		width: max-content;
+		z-index: 1;
+	}
+
+	#box:checked ~.menu{
+		left: 0;
+
+	}
+	img{
+	 width:100%;
+	}
+	h1{
+		font-size: 1.8rem;
+	}
+	
+	.table1 thead{
+		display: none;
+	}
+	.table1 tr,
+	.table1 td{
+		display: block;
+	}
+	.table1 tr :not(:last-child){
+		border-bottom: 3px solid #FF6A0083 ;
+	}
+	.table1 td{
+		padding-left: 54%;
+		position: relative;
+		color: #E56A00E9;
+	}
+	.table1 td::before{
+	   padding:absolute;
+		padding: 5px;
+		left: 0;
+		top:0;
+		bottom: 0;
+		content: attr(data-col-title);
+		font-weight: bold;
+		color: #E56A00E9;
+	}
+	
+	.psalad1 {
+		border-top: 2px solid  #E56A00E9;	
+  	}
+  	.psalad{
+  		font-weight: bold;
+  	}
+  	 .column span{
+  		color:black;
+  	}
+  	#how{
+  		color: black;
+  	}
+	div .image>img{
+	display: flex;
+     max-width: 100%;
+     height: auto;
+	border-radius: 25px 50px;
+	position: flex;
+    }
+
+    .table2 thead{
+		display: none;
+	}
+	.table2 tr,
+	.table2 td{
+		display: block;
+	}
+	.table2 tr :not(:last-child){
+		border-bottom: 3px solid #FF6A0083 ;
+	}
+	.table2 td{
+		padding-left: 50%;
+		position: relative;
+		color: #E56A00E9;
+		text-align: right;
+		font-weight: bold;
+	}
+	.table2 td::before{
+	   position:absolute;
+		padding-left: 15px;
+		font-size: 1rem;
+		left: 0;
+		width:100%;
+		content: attr(data-col-title);
+		font-weight: bold;
+		color: #E56A00E9;
+		text-align: left;
+	}
+}
+	
+/*salad1*/
+body.salad1{
+	width: 100%;
+	height: 100vh;
+	background-image: url(../Images/cutlery.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+	background-attachment: fixed;
+}
+  h1{
+font-family:'Palatino Linotype',serif;
+font-size:2em;
+position: relative;
+text-align:center;
+margin: 0;
+padding: 0;
+color: #E56A00E9;
+}
+h2{
+	font-family:'Palatino Linotype',serif;
+font-size:1.6em;
+position: relative;
+text-align:center;
+margin: 0;
+padding: 0;
+color: #E56A00E9;
+text-decoration: underline;
+font-weight: bold;
+}
+.title1{
+	display: flex;
+	flex-flow: row wrap;
+	text-align: center;
+}
+.title1>*{
+	padding: 10px;
+	margin: 10px;
+	flex:1 100%;
+	border-radius: 10px;
+}
+.table1{
+	border-collapse: collapse;
+	width: 100%;
+	max-width: 750px;
+	margin: 25px auto 0;
+	font-size: 1rem;
+	font-family:'Palatino Linotype',serif;
+	border-radius: 5px 5px 0 0;
+	overflow: hidden;
+	box-shadow: 0 0 20px  #E56A00AD;
+}
+.table1 thead tr{
+	text-align: left;
+	background-color: #E56A00AD;
+	border-bottom: 1px solid black;
+}
+.table1 th,
+.table1 td{
+      padding: 10px 10px;
+      text-align: left;
+      border-right:white;
+      border-left:white;
+}
+.header{
+ padding:7vw;
+  text-align: center;
+}
+
+.recipe1{
+	font-size: 1.2rem;
+	line-height: 2rem;
+	text-align: justify;
+	margin-top: 10px;
+}
+ 
+
+#how{
+	font-size: 1.3rem;
+	font-weight: bold;
+
+}
+.logo2{
+margin-top: 10px;
+}
+
+.classimage{
+	text-align: center;
+	width: 100%;
+
+}
+.imgname{
+max-width: 100%;
+border-radius: 50px;
+box-shadow: 0 0 50px  #E56A00AD;
+}
+.column {
+  float: left;
+  width: 50%;
+  padding: 10px;
+  text-align: left;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.psalad1{
+	width: 100%;
+	list-style: none;
+	margin: auto;
+	padding: 0px;
+   font-size: 1.2rem;
+  font-family:'Palatino Linotype',serif;
+}
+ .table2 .plan{
+	width: 100%;
+	list-style: none;
+	margin: auto;
+	padding: 0;
+	font-size: 2rem;
+	font-family:'Palatino Linotype',serif;
+
+}
+ .table2 .plan li{
+	font-size: 1rem;
+	line-height: 2rem;
+}
+.psalad1 li{
+font-size: 1.2rem;
+  line-height:2rem;
+  list-style: none;
+
+}
+#portion,
+#servings,
+#ingredients2,
+#ingredients3,
+#products5,
+#products10,
+#products11,
+#products12,
+#products13,
+#products14,
+#products15,
+#products16,
+#products17,
+#products18,
+#products19{
+	border-radius: 25px;
+	width: 100%;
+	max-width: 70px;
+	 background-color: #E56A00AD;
+	 font-weight: bold;
+	 text-align: center;
+}
+#choose{
+	border-radius: 25px;
+	width: 100%;
+	max-width: 124px;
+	 background-color: #E56A00AD;
+	 font-weight: bold;
+	 text-align: center;
+}
+ span{
+	color: #E56A00E9;
+}
+.psalad{
+display: block;
+font-family:'Palatino Linotype',serif;
+font-size: 1.3rem;
+margin: 5px 0 10px;
+color: #E56A00E9;
+font-weight: bold;
+}
+/*Salad2*/
+
+body.salad2{
+	width: 100%;
+	height: 100vh;
+	background-image: url(../Images/cutlery.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+	background-attachment: fixed;
+}
+body.salad3{
+	width: 100%;
+	height: 100vh;
+	background-image: url(../Images/cutlery.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+	background-attachment: fixed;
+}
+body.salad4{
+	width: 100%;
+	height: 100vh;
+	background-image: url(../Images/cutlery.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+	background-attachment: fixed;
+}
+body.salad5{
+	width: 100%;
+	height: 100vh;
+	background-image: url(../Images/cutlery.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+	background-attachment: fixed;
+}
+body.dish1{
+	width: 100%;
+	height: 100vh;
+	background-image: url(../Images/cutlery.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+	background-attachment: fixed;
+}
+body.dish2{
+	width: 100%;
+	height: 100vh;
+	background-image: url(../Images/cutlery.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+	background-attachment: fixed;
+}
+body.dish3{
+	width: 100%;
+	height: 100vh;
+	background-image: url(../Images/cutlery.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+	background-attachment: fixed;
+}
+body.dish4{
+	width: 100%;
+	height: 100vh;
+	background-image: url(../Images/cutlery.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+	background-attachment: fixed;
+}
+body.dish5{
+	width: 100%;
+	height: 100vh;
+	background-image: url(../Images/cutlery.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+	background-attachment: fixed;
+}
+body.dessert1{
+	width: 100%;
+	height: 100vh;
+	background-image: url(../Images/cutlery.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+	background-attachment: fixed;
+}
+body.dessert2{
+	width: 100%;
+	height: 100vh;
+	background-image: url(../Images/cutlery.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+	background-attachment: fixed;
+}
+body.dessert3{
+	width: 100%;
+	height: 100vh;
+	background-image: url(../Images/cutlery.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+	background-attachment: fixed;
+}
+body.breakfast1{
+	width: 100%;
+	height: 100vh;
+	background-image: url(../Images/cutlery.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+	background-attachment: fixed;
+}
+body.breakfast2{
+	width: 100%;
+	height: 100vh;
+	background-image: url(../Images/cutlery.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+	background-attachment: fixed;
+}
+/*HealthyLife*/
+
+body.healthylife{
+	width: 100%;
+	height: 100vh;
+	background-image: url(../Images/cutlery.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+	background-attachment: fixed;
+}
+.recipe2{
+	font-size: 1.2rem;
+	line-height: 2rem;
+    max-width:900px;
+    left: 0; bottom: 0; right: 0;
+    margin:auto;
+    text-align: justify;
+    margin-top: 10px;
+}
+.recipe2 a{
+	color: black;
+}
+.recipe2 a:link{
+	text-decoration: none;
+}
+.recipe2 a:hover{
+	color:#930000FF;
+	text-decoration: underline;
+
+}
+.column2{
+   width: 50%;
+  padding: 10px;
+  text-align: center;
+}
+/*Products*/
+body.products{
+	width: 100%;
+	height: 100vh;
+	background-image: url(../Images/cutlery.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+	background-attachment: fixed;
+}
+.table2{
+	border-collapse: collapse;
+     max-width: 750px;
+	margin: 25px auto 0;
+	font-size: 1rem;
+	font-family:'Palatino Linotype',serif;
+	border-radius: 5px 5px 0 0;
+	overflow: hidden;
+	box-shadow: 0 0 20px  #E56A00AD;
+
+
+}
+.table2 thead tr{
+	background-color:#E56A00AD;
+	text-align: left;
+	font-weight: bold;
+}
+.table2 th,
+.table2 td{
+	padding: 12px 15px;
+}
+.table2 td{
+border:1px solid #E56A00AD;
+}
+.table2 tbody tr{
+	border-bottom: 1px solid #E56A00AD;
+	border:1px solid #E56A00AD;
+}
+.table2 tbody tr:nth-of-type(even){
+	background-color:#FF770098;
+}
+.table2 tbody tr #food{
+	border-right: 1px solid #E56A00AD;
+	font-weight: bold;
+}
+ .table2 a{
+	color: black;
+}
+ .table2 a:link{
+	text-decoration: none;
+}
+ .table2 a:hover{
+	color:#930000FF;
+	text-decoration: underline;
+}
+.caption{
+	text-align: left;
+    font-size: 2rem;
+}
+
+
+
+
